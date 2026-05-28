@@ -1,0 +1,91 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CORPO DO SITE */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* HEADER */
+header{
+    background: #2e7d32;
+    color: white;
+    padding: 20px;
+}
+
+/* TÍTULO */
+header h1{
+    margin-bottom: 15px;
+}
+
+/* BOTÕES DO MENU */
+nav button{
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #66bb6a;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* EFEITO HOVER */
+nav button:hover{
+    background: #1b5e20;
+    transform: scale(1.05);
+}
+
+/* PÁGINAS */
+.pagina{
+    display: none;
+    padding: 30px;
+}
+
+/* PÁGINA ATIVA */
+.ativa{
+    display: block;
+}
+
+/* IMAGENS */
+img{
+    width: 80%;
+    max-width: 700px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* INPUTS */
+input{
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #999;
+}
+
+/* BOTÕES DA CALCULADORA */
+.botoes-calculo button{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #43a047;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESULTADO */
+#resultado{
+    margin-top: 20px;
+    color: #1b5e20;
+}

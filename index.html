@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech Brasil</title>
+
+    <!-- Ligação com CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header>
+        <h1>🌱 AgroTech Brasil</h1>
+
+        <nav>
+            <button onclick="mostrarPagina('inicio')">Início</button>
+            <button onclick="mostrarPagina('sustentabilidade')">Sustentabilidade</button>
+            <button onclick="mostrarPagina('tecnologia')">Tecnologia</button>
+            <button onclick="mostrarPagina('calculadora')">Calculadora</button>
+        </nav>
+    </header>
+
+    <!-- PÁGINA 1 -->
+    <section id="inicio" class="pagina ativa">
+
+        <h2>🌾 O Agronegócio Brasileiro</h2>
+
+        <p>
+            O agronegócio é um dos setores mais importantes da economia brasileira.
+            Ele envolve produção agrícola, pecuária, tecnologia no campo e exportação
+            de alimentos para diversos países.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop"
+        alt="Plantação">
+
+    </section>
+
+    <!-- PÁGINA 2 -->
+    <section id="sustentabilidade" class="pagina">
+
+        <h2>♻️ Sustentabilidade no Campo</h2>
+
+        <p>
+            A sustentabilidade busca equilibrar produção agrícola e preservação ambiental.
+            Técnicas como irrigação inteligente, energia solar e reaproveitamento da água
+            ajudam a proteger o meio ambiente.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop"
+        alt="Natureza">
+
+    </section>
+
+    <!-- PÁGINA 3 -->
+    <section id="tecnologia" class="pagina">
+
+        <h2>🚜 Tecnologia no Agronegócio</h2>
+
+        <p>
+            Máquinas automatizadas, drones e sensores inteligentes aumentam a produtividade
+            no campo. A tecnologia ajuda agricultores a economizar recursos e melhorar as colheitas.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
+        alt="Tecnologia agrícola">
+
+    </section>
+
+    <!-- PÁGINA 4 -->
+    <section id="calculadora" class="pagina">
+
+        <h2>🧮 Calculadora Rural</h2>
+
+        <p>Faça um cálculo simples de produção.</p>
+
+        <input type="number" id="valor1" placeholder="Digite o primeiro número">
+
+        <input type="number" id="valor2" placeholder="Digite o segundo número">
+
+        <div class="botoes-calculo">
+            <button onclick="somar()">Somar</button>
+            <button onclick="multiplicar()">Multiplicar</button>
+            <button onclick="limpar()">Limpar</button>
+        </div>
+
+        <h3 id="resultado">Resultado: 0</h3>
+
+    </section>
+
+    <!-- Ligação com JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
