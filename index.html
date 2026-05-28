@@ -1,96 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- CONFIGURAÇÕES DO SITE -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroTech Brasil</title>
 
-    <!-- Ligação com CSS -->
+    <title>AgroForte Sustentável</title>
+
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- MENU -->
+    <!-- CABEÇALHO -->
     <header>
-        <h1>🌱 AgroTech Brasil</h1>
 
-        <nav>
-            <button onclick="mostrarPagina('inicio')">Início</button>
-            <button onclick="mostrarPagina('sustentabilidade')">Sustentabilidade</button>
-            <button onclick="mostrarPagina('tecnologia')">Tecnologia</button>
-            <button onclick="mostrarPagina('calculadora')">Calculadora</button>
-        </nav>
-    </header>
-
-    <!-- PÁGINA 1 -->
-    <section id="inicio" class="pagina ativa">
-
-        <h2>🌾 O Agronegócio Brasileiro</h2>
-
-        <p>
-            O agronegócio é um dos setores mais importantes da economia brasileira.
-            Ele envolve produção agrícola, pecuária, tecnologia no campo e exportação
-            de alimentos para diversos países.
-        </p>
-
-        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop"
-        alt="Plantação">
-
-    </section>
-
-    <!-- PÁGINA 2 -->
-    <section id="sustentabilidade" class="pagina">
-
-        <h2>♻️ Sustentabilidade no Campo</h2>
-
-        <p>
-            A sustentabilidade busca equilibrar produção agrícola e preservação ambiental.
-            Técnicas como irrigação inteligente, energia solar e reaproveitamento da água
-            ajudam a proteger o meio ambiente.
-        </p>
-
-        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop"
-        alt="Natureza">
-
-    </section>
-
-    <!-- PÁGINA 3 -->
-    <section id="tecnologia" class="pagina">
-
-        <h2>🚜 Tecnologia no Agronegócio</h2>
-
-        <p>
-            Máquinas automatizadas, drones e sensores inteligentes aumentam a produtividade
-            no campo. A tecnologia ajuda agricultores a economizar recursos e melhorar as colheitas.
-        </p>
-
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
-        alt="Tecnologia agrícola">
-
-    </section>
-
-    <!-- PÁGINA 4 -->
-    <section id="calculadora" class="pagina">
-
-        <h2>🧮 Calculadora Rural</h2>
-
-        <p>Faça um cálculo simples de produção.</p>
-
-        <input type="number" id="valor1" placeholder="Digite o primeiro número">
-
-        <input type="number" id="valor2" placeholder="Digite o segundo número">
-
-        <div class="botoes-calculo">
-            <button onclick="somar()">Somar</button>
-            <button onclick="multiplicar()">Multiplicar</button>
-            <button onclick="limpar()">Limpar</button>
+        <div class="acessibilidade-container">
+            <button id="btn-contraste" class="btn-util">
+                modo-noturno
+            </button>
         </div>
 
-        <h3 id="resultado">Resultado: 0</h3>
+        <h1>Agroforte, futuro sustentável</h1>
 
-    </section>
+        <h2>
+            Equilíbrio entre produção e meio ambiente
+        </h2>
 
-    <!-- Ligação com JavaScript -->
+        <p class="autores">
+            <strong>Membro:</strong> Leonardo Rodrigues nº19
+        </p>
+
+    </header>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="menu">
+
+        <button onclick="mostrarPagina('pagina1')">
+            Calculadora Carbono
+        </button>
+
+        <button onclick="mostrarPagina('pagina2')">
+            MIP
+        </button>
+
+        <button onclick="mostrarPagina('pagina3')">
+            ABC
+        </button>
+
+        <button onclick="mostrarPagina('pagina4')">
+            Bioenergia
+        </button>
+
+    </nav>
+
+    <!--  CONTEÚDO PRINCIPAL  -->
+    <main>
+
+        <!-- PÁGINA 1 -->
+        <section id="pagina1" class="pagina ativa">
+
+            <div class="post">
+
+                <h2>Calculadora de Carbono</h2>
+
+                <p>
+                    Descubra uma estimativa de emissão de carbono da fazenda.
+                </p>
+
+                <label>Quantidade de tratores:</label>
+                <input type="number" id="tratores">
+
+                <label>Litros de combustível por mês:</label>
+                <input type="number" id="combustivel">
+
+                <label>Quantidade de animais:</label>
+                <input type="number" id="animais">
+
+                <button onclick="calcularCarbono()">
+                    Calcular Carbono
+                </button>
+
+                <div id="resultado-carbono"></div>
+
+                <hr class="divisor">
+
+                <h3>Como evitar excesso de carbono?</h3>
+
+                <ul>
+                    <li>Utilizar energia solar.</li>
+                    <li>Reduzir queimadas.</li>
+                    <li>Usar plantio direto.</li>
+                    <li>Fazer rotação de culturas.</li>
+                    <li>Utilizar bioenergia.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- PÁGINA 2 -->
+        <section id="pagina2" class="pagina">
+
+            <div class="post">
+
+                <h2>MIP - Manejo Integrado de Pragas</h2>
+
+                <p>
+                    O MIP é um conjunto de técnicas sustentáveis utilizadas
+                    para controlar pragas agrícolas sem prejudicar o meio ambiente.
+                </p>
+
+                <p>
+                    O sistema combina:
+                </p>
+
+                <ul>
+                    <li>Controle biológico</li>
+                    <li>Monitoramento da lavoura</li>
+                    <li>Uso consciente de defensivos</li>
+                    <li>Rotação de culturas</li>
+                </ul>
+
+                <p>
+                    O objetivo é diminuir prejuízos e reduzir impactos ambientais.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PÁGINA 3 -->
+        <section id="pagina3" class="pagina">
+
+            <div class="post">
+
+                <h2>Programa ABC</h2>
+
+                <p>
+                    O Programa ABC significa Agricultura de Baixa Emissão de Carbono.
+                </p>
+
+                <p>
+                    Ele incentiva práticas agrícolas sustentáveis para diminuir
+                    gases do efeito estufa.
+                </p>
+
+                <h3>Práticas do ABC</h3>
+
+                <ul>
+                    <li>Recuperação de pastagens</li>
+                    <li>Integração lavoura-pecuária-floresta</li>
+                    <li>Plantio direto</li>
+                    <li>Fixação biológica de nitrogênio</li>
+                </ul>
+
+                <p>
+                    Essas técnicas ajudam o produtor e o meio ambiente ao mesmo tempo.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PÁGINA 4 -->
+        <section id="pagina4" class="pagina">
+
+            <div class="post">
+
+                <h2>Bioenergia</h2>
+
+                <p>
+                    Bioenergia é a energia produzida através de materiais orgânicos,
+                    como restos agrícolas, esterco e biomassa.
+                </p>
+
+                <h3>Exemplos</h3>
+
+                <ul>
+                    <li>Biogás</li>
+                    <li>Etanol</li>
+                    <li>Biodiesel</li>
+                    <li>Energia da biomassa</li>
+                </ul>
+
+                <p>
+                    A bioenergia reduz a poluição e ajuda no aproveitamento
+                    de resíduos agrícolas.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Agrinho - 2026</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>

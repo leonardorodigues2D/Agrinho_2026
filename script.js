@@ -1,54 +1,56 @@
-// FUNÇÃO PARA TROCAR PÁGINAS
+/* MODO NOTURNO */
+
+const botaoContraste = document.getElementById("btn-contraste");
+
+botaoContraste.onclick = function(){
+
+    document.body.classList.toggle("alto-contraste");
+};
+
+/* TROCAR PÁGINAS */
+
+
 function mostrarPagina(idPagina){
 
     // Seleciona todas as páginas
-    let paginas = document.querySelectorAll(".pagina");
+    const paginas = document.querySelectorAll(".pagina");
 
     // Remove a classe ativa
     paginas.forEach(function(pagina){
+
         pagina.classList.remove("ativa");
     });
 
-    // Mostra a página clicada
+    // Mostra a página escolhida
     document.getElementById(idPagina).classList.add("ativa");
 }
 
+/* CALCULADORA DE CARBONO */
 
-// FUNÇÃO SOMAR
-function somar(){
+function calcularCarbono(){
 
-    let numero1 = Number(document.getElementById("valor1").value);
+    // Captura os valores
+    const tratores = Number(document.getElementById("tratores").value);
 
-    let numero2 = Number(document.getElementById("valor2").value);
+    const combustivel = Number(document.getElementById("combustivel").value);
 
-    let resultado = numero1 + numero2;
+    const animais = Number(document.getElementById("animais").value);
 
-    document.getElementById("resultado").innerHTML =
-    "Resultado: " + resultado;
-}
+    // Fórmula simples de estimativa
+    const carbono =
+        (tratores * 120) +
+        (combustivel * 2.5) +
+        (animais * 15);
 
+    // Resultado
+    const resultado = document.getElementById("resultado-carbono");
 
-// FUNÇÃO MULTIPLICAR
-function multiplicar(){
+    resultado.innerHTML = `
+        <h3>Resultado:</h3>
 
-    let numero1 = Number(document.getElementById("valor1").value);
-
-    let numero2 = Number(document.getElementById("valor2").value);
-
-    let resultado = numero1 * numero2;
-
-    document.getElementById("resultado").innerHTML =
-    "Resultado: " + resultado;
-}
-
-
-// FUNÇÃO LIMPAR
-function limpar(){
-
-    document.getElementById("valor1").value = "";
-
-    document.getElementById("valor2").value = "";
-
-    document.getElementById("resultado").innerHTML =
-    "Resultado: 0";
+        <p>
+            A estimativa de emissão é de
+            <strong>${carbono.toFixed(2)} kg de carbono</strong>.
+        </p>
+    `;
 }
