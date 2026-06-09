@@ -22,24 +22,19 @@
     --cor-borda: #d9f99d;
 }
 
-/* MODO NOTURNO */
-
+/* MODO NOTURNO / ALTO CONTRASTE*/ 
 body.alto-contraste {
-
     --cor-fundo-geral: #011402;
     --cor-fundo-card: #023306;
 
     --cor-texto-claro: #d9f99d;
     --cor-texto-escuro: #a3e635;
-
     --cor-destaque: #a3e635;
-
-    --cor-botao-fundo: #000000;
-    --cor-botao-texto: #a3e635;
+    --cor-botao-fundo: #000000; /* Mude aqui a cor de fundo do botão */
+    --cor-botao-texto: #a3e635; /* Mude aqui a cor do texto do botão */
 
     --cor-borda: #65a30d;
 }
-
 /* CONFIGURAÇÕES GERAIS */
 body {
     margin: 0;
