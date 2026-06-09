@@ -3,6 +3,6 @@
 # https://www.embrapa.br/tema-agroecologia-e-producao-organica?utm_source=chatgpt.com
 
 
-objetivo,
+objetivo: fazer as pessoas entenderem o que é MIP, ABC, Bioenergia e possibilitar as pessoas conferirem o consumo de carbono
 justificativa breve,
-tecnologias: CANVA.
+tecnologias: CANVA para criar a logo do site.
