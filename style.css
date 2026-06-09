@@ -30,6 +30,7 @@ body.alto-contraste {
     --cor-texto-claro: #d9f99d;
     --cor-texto-escuro: #a3e635;
     --cor-destaque: #a3e635;
+
     --cor-botao-fundo: #000000; /* Mude aqui a cor de fundo do botão */
     --cor-botao-texto: #a3e635; /* Mude aqui a cor do texto do botão */
 
@@ -54,7 +55,7 @@ header {
 
     padding: 30px;
 
-    background-color: #a3e635;(--cor-fundo-card);
+    background-color: var(--cor-fundo-card);
 
     border-bottom: 3px solid var(--cor-borda);
 }
@@ -97,7 +98,7 @@ header h2 {
 
     border: 2px solid var(--cor-borda);
 
-    background-color: var(--cor-botao-fundo);
+    background-color: #a3e635;(--cor-botao-fundo);
 
     color: var(--cor-botao-texto);
 
