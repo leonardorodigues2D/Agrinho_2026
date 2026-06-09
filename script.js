@@ -46,25 +46,28 @@ function calcularCarbono(){
 
     if (carbono <= 1500) {
         classificacao = "BOM (Sustentável)";
-        corTexto = "#28a745"; // Verde
+        // Usa o verde de destaque do seu tema (fica ótimo no modo claro e escuro)
+        corTexto = "var(--cor-destaque)"; 
         mensagemDica = "Sua fazenda está operando com um excelente nível de emissões! Continue aplicando práticas sustentáveis.";
     } else if (carbono > 1500 && carbono <= 5000) {
         classificacao = "MÉDIO (Moderado)";
-        corTexto = "#ffc107"; // Amarelo/Laranja
+        // Usa uma cor de alerta amarelada padrão para chamar atenção moderada
+        corTexto = "#fcd34d"; 
         mensagemDica = "A emissão está moderada. Veja a aba 'ABC' para conhecer planos de redução de carbono no solo.";
     } else {
         classificacao = "RUIM (Alto)";
-        corTexto = "#dc3545"; // Vermelho
+        // Usa um tom de vermelho/coral que contrasta bem com os seus tons de verde
+        corTexto = "#f87171"; 
         mensagemDica = "Alerta de altas emissões! Considere o uso de Bioenergia para substituir combustíveis fósseis e aplique o MIP.";
     }
 
-    // Resultado renderizado direto no HTML com a cor correspondente
+    // Resultado renderizado direto no HTML usando as variáveis do seu CSS para o fundo e bordas
     resultado.innerHTML = `
-        <div style="margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;">
-            <h3>Resultado da Análise:</h3>
+        <div style="margin-top: 20px; padding: 15px; border: 2px solid var(--cor-borda); border-radius: 8px; background-color: var(--cor-botao-fundo); color: var(--cor-texto-claro);">
+            <h3 style="color: var(--cor-destaque); margin-top: 0;">Resultado da Análise:</h3>
             <p>A estimativa de emissão é de: <strong>${carbono.toFixed(2)} kg de carbono</strong>.</p>
             <p>Status do Impacto: <span style="color: ${corTexto}; font-weight: bold; font-size: 1.2em;">${classificacao}</span></p>
-            <p style="font-style: italic; margin-top: 10px; color: #555;">${mensagemDica}</p>
+            <p style="font-style: italic; margin-top: 10px; color: var(--cor-texto-claro); opacity: 0.9;">${mensagemDica}</p>
         </div>
-    `;
+    
 }
