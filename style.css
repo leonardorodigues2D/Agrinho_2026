@@ -30,7 +30,7 @@ body.alto-contraste {
     --cor-texto-claro: #d9f99d;
     --cor-texto-escuro: #a3e635;
     --cor-destaque: #a3e635;
-    --cor-botao-fundo: #a3e635; /* Mude aqui a cor de fundo do botão */
+    --cor-botao-fundo: #000000; /* Mude aqui a cor de fundo do botão */
     --cor-botao-texto: #a3e635; /* Mude aqui a cor do texto do botão */
 
     --cor-borda: #65a30d;
