@@ -239,17 +239,23 @@ footer {
 }
 
 /* BOTÃO UTIL DE ACESSIBILIDADE */
-
 .acessibilidade-container {
-
     text-align: right;
 }
 
 .btn-util {
-
     width: auto !important;
-
     padding: 8px 12px !important;
+
+    /* APLICAÇÃO DAS SUAS VARIÁVEIS DE CORES: */
+    background-color: var(--cor-botao-fundo) !important; /* Usa o fundo de botão do tema ativo */
+    color: var(--cor-botao-texto) !important;            /* Usa o texto de botão do tema ativo */
+    border: 2px solid var(--cor-borda) !important;       /* Usa a cor de borda do tema ativo */
+    
+    /* MELHORIAS VISUAIS (OPCIONAL) */
+    cursor: pointer;                                     /* Mostra a "mãozinha" ao passar o mouse */
+    border-radius: 6px;                                  /* Deixa os cantos arredondados igual aos inputs */
+    font-weight: bold;                                   /* Deixa o texto em negrito */
 }
 
 /* RESPONSIVIDADE */
