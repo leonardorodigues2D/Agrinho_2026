@@ -3,6 +3,6 @@
 # https://www.embrapa.br/tema-agroecologia-e-producao-organica?utm_source=chatgpt.com
 
 
-objetivo
-justificativa breve
-tecnologias
+objetivo,
+justificativa breve,
+tecnologias: CANVA.
