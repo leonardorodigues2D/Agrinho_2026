@@ -235,15 +235,14 @@ input {
 /* RODAPÉ */
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: var(--cor-fundo-card);
-    border-top: 3px solid var(--cor-borda);
-}
 
-/* Remove margens de textos dentro do rodapé que empurram as bordas */
-footer p, footer h4 {
-    margin: 0; 
+    text-align: center;
+
+    padding: 10px 20px;
+
+    background-color: var(--cor-fundo-card);
+
+    border-top: 3px solid var(--cor-borda);
 }
 
 /* BOTÃO UTIL DE ACESSIBILIDADE */
