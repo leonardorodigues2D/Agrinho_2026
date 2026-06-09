@@ -54,7 +54,7 @@ header {
 
     padding: 30px;
 
-    background-color: var(--cor-fundo-card);
+    background-color: #a3e635;(--cor-fundo-card);
 
     border-bottom: 3px solid var(--cor-borda);
 }
