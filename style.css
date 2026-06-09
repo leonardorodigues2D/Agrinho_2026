@@ -41,19 +41,17 @@ body.alto-contraste {
 }
 
 /* CONFIGURAÇÕES GERAIS */
-
 body {
-
     margin: 0;
-
     font-family: 'Roboto', sans-serif;
-
     background-color: var(--cor-fundo-geral);
-
     color: var(--cor-texto-claro);
-
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
 }
+
 
 header {
 
@@ -139,12 +137,12 @@ header h2 {
 
 /* POSTS */
 main {
-
+    width: 100%; /* Garante que preencha a largura */
     max-width: 900px;
-
     margin: auto;
-
     padding: 20px;
+    box-sizing: border-box;
+    flex: 1; /* Empurra o rodapé para o final da tela quando houver pouco texto */
 }
 
 .post {
