@@ -7,12 +7,9 @@ botaoContraste.onclick = function(){
     //  logo
     const logo = document.getElementById("logo");
     if (logo) {
-        // Se o modo escuro estiver ativo, você pode trocar a imagem se quiser
         if (document.body.classList.contains("alto-contraste")) {
-            // Exemplo caso tenha uma logo clara para fundo escuro:
             // logo.src = "img/logo_escura.jpg"; 
         } else {
-            // Volta para a logo padrão no modo claro
             logo.src = "img/logo1.jpg";
         }
     }
@@ -20,15 +17,12 @@ botaoContraste.onclick = function(){
 
 /* TROCAR PÁGINAS */
 function mostrarPagina(idPagina){
-    // Seleciona todas as páginas
     const paginas = document.querySelectorAll(".pagina");
 
-    // Remove a classe ativa
     paginas.forEach(function(pagina){
         pagina.classList.remove("ativa");
     });
 
-    // Mostra a página escolhida
     document.getElementById(idPagina).classList.add("ativa");
 }
 
@@ -45,12 +39,32 @@ function calcularCarbono(){
     // Resultado
     const resultado = document.getElementById("resultado-carbono");
 
-    // Texto corrigido e fechado corretamente aqui:
+    // Lógica de estimativa: Bom, Médio ou Ruim
+    let classificacao = "";
+    let corTexto = "";
+    let mensagemDica = "";
+
+    if (carbono <= 1500) {
+        classificacao = "BOM (Sustentável)";
+        corTexto = "#28a745"; // Verde
+        mensagemDica = "Sua fazenda está operando com um excelente nível de emissões! Continue aplicando práticas sustentáveis.";
+    } else if (carbono > 1500 && carbono <= 5000) {
+        classificacao = "MÉDIO (Moderado)";
+        corTexto = "#ffc107"; // Amarelo/Laranja
+        mensagemDica = "A emissão está moderada. Veja a aba 'ABC' para conhecer planos de redução de carbono no solo.";
+    } else {
+        classificacao = "RUIM (Alto)";
+        corTexto = "#dc3545"; // Vermelho
+        mensagemDica = "Alerta de altas emissões! Considere o uso de Bioenergia para substituir combustíveis fósseis e aplique o MIP.";
+    }
+
+    // Resultado renderizado direto no HTML com a cor correspondente
     resultado.innerHTML = `
-        <h3>Resultado:</h3>
-        <p>
-            A estimativa de emissão é de
-            <strong>${carbono.toFixed(2)} kg de carbono</strong>.
-        </p>
+        <div style="margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;">
+            <h3>Resultado da Análise:</h3>
+            <p>A estimativa de emissão é de: <strong>${carbono.toFixed(2)} kg de carbono</strong>.</p>
+            <p>Status do Impacto: <span style="color: ${corTexto}; font-weight: bold; font-size: 1.2em;">${classificacao}</span></p>
+            <p style="font-style: italic; margin-top: 10px; color: #555;">${mensagemDica}</p>
+        </div>
     `;
 }
