@@ -254,8 +254,8 @@ footer {
     
     /* MELHORIAS VISUAIS (OPCIONAL) */
     cursor: pointer;                                     /* Mostra a "mãozinha" ao passar o mouse */
-    border-radius: 6px;                                  /* Deixa os cantos arredondados igual aos inputs */
-    font-weight: bold;                                   /* Deixa o texto em negrito */
+    border-radius: 6px;
+    font-weight: bold;
 }
 
 /* RESPONSIVIDADE */
