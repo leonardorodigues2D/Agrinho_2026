@@ -55,7 +55,7 @@ header {
 }
 /*logo do site*/
 .logo-site {
-    max-width: 250px;       /* Controla a largura máxima da logo */
+    max-width: 800px;       /* Controla a largura máxima da logo */
     height: auto;           /* Mantém a proporção original da imagem */
     border-radius: 50%;     /* Deixa a logo redonda (remova se preferir quadrada) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar destaque */
