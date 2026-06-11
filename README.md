@@ -13,4 +13,4 @@ A sustentabilidade no campo é essencial para garantir a produção de alimentos
 
 ### Tecnologias Utilizadas:
 - chatgpt(para a criação dos textos)
-- Canva (criação da logo)
+- Canva (criação da logo utilizando ia)

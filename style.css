@@ -79,7 +79,6 @@ body.alto-contraste .logo-site {
     border: 2px solid var(--cor-borda); /* Adiciona uma borda brilhante no modo escuro */
     filter: brightness(0.9);            /* Reduz levemente o brilho para não ofuscar */
 }
-/* ========================================== */
 
 header h1 {
     font-family: 'Orbitron', sans-serif;
